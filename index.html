@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birol | Software & Game Developer</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --card-bg: #1e293b;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: var(--text-main);
+        }
+        h2 {
+            color: var(--accent);
+            font-size: 1.2rem;
+            font-weight: 400;
+            margin-top: 5px;
+        }
+        .links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin: 0 10px;
+            border-bottom: 1px solid transparent;
+            transition: all 0.3s;
+        }
+        .links a:hover {
+            color: var(--accent);
+            border-bottom: 1px solid var(--accent);
+        }
+        .section-title {
+            font-size: 1.5rem;
+            border-bottom: 2px solid var(--card-bg);
+            padding-bottom: 10px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        .project-card, .exp-card {
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .project-card h3, .exp-card h3 {
+            margin-top: 0;
+            color: var(--accent);
+            display: flex;
+            justify-content: space-between;
+        }
+        .project-card span.date {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        .tags {
+            margin-top: 15px;
+        }
+        .tag {
+            background-color: #0c4a6e;
+            color: #bae6fd;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+            display: inline-block;
+        }
+        a.btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 16px;
+            background-color: var(--accent);
+            color: #0f172a;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        a.btn:hover {
+            background-color: #0ea5e9;
+        }
+        ul {
+            padding-left: 20px;
+            color: var(--text-muted);
+        }
+        li {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Birol</h1>
+            <h2>Software & Game Developer | Founder @ BEEM STUDIOS</h2>
+            <div class="links">
+                <a href="mailto:birolyesiloglu2002@hotmail.com">Email</a>
+                <a href="https://www.linkedin.com/in/birol-yeşiloğlu" target="_blank">LinkedIn</a>
+                <a href="https://github.com/BirolYesiloglu" target="_blank">GitHub</a>
+            </div>
+        </header>
+
+        <div class="section-title">Featured Project</div>
+        <div class="project-card">
+            <h3><span>Link It (Mobile Puzzle Game)</span> <span class="date">2026</span></h3>
+            <p>Designed and engineered a 2D grid-based mobile puzzle game, architecting the complete software system from scratch as a solo developer under BEEM STUDIOS.</p>
+            <ul>
+                <li>Implemented core gameplay mechanics strictly adhering to <strong>Clean Architecture</strong>, <strong>Object Pooling</strong>, and <strong>Event-Driven Design</strong>.</li>
+                <li>Developed a custom <strong>topological validation algorithm</strong> to dynamically verify the mathematical solvability of complex grid layouts.</li>
+                <li>Built an automated level generation tool utilizing optimized data structures, ensuring error-free level states.</li>
+            </ul>
+            <div class="tags">
+                <span class="tag">Unity</span>
+                <span class="tag">C#</span>
+                <span class="tag">Algorithms</span>
+                <span class="tag">Mobile</span>
+            </div>
+            <a href="https://play.google.com/store/apps/details?id=com.beem_studios.link_it" target="_blank" class="btn">View on Google Play</a>
+        </div>
+
+        <div class="section-title">Experience</div>
+        <div class="exp-card">
+            <h3><span>Founder & Game Developer | BEEM STUDIOS</span> <span class="date">Apr 2026 – Present</span></h3>
+            <ul>
+                <li>Managing the complete product lifecycle of a mobile title from conceptualization to global commercial release.</li>
+                <li>Established memory management protocols and optimized UI rendering to maintain a stable 60 FPS across a diverse range of Android devices.</li>
+                <li>Orchestrated the end-to-end deployment pipeline via Google Play Console, including IAP SDK integrations, release track management, and localization.</li>
+            </ul>
+        </div>
+        <div class="exp-card">
+            <h3><span>Game Developer Intern | Skyloft Studios</span> <span class="date">Summer 2024</span></h3>
+            <ul>
+                <li>Developed core gameplay mechanics for a casual shooter mobile game prototype using Unity and C#.</li>
+                <li>Gained experience in collaborative game development and version control (Git).</li>
+            </ul>
+        </div>
+
+        <div class="section-title">Other Projects</div>
+        <div class="project-card">
+            <h3><span>TradePath (Backend Developer)</span> <span class="date">2025</span></h3>
+            <p>Mobile stock market prediction application. Responsible for backend and database development using <strong>Java Spring Boot</strong> and <strong>PostgreSQL</strong>. Integrated external financial APIs for real-time data.</p>
+            <div class="tags">
+                <span class="tag">Java</span>
+                <span class="tag">Spring Boot</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">REST API</span>
+            </div>
+        </div>
+
+        <div class="section-title">Technical Skills</div>
+        <div class="project-card" style="color: var(--text-muted);">
+            <p><strong>Languages:</strong> C#, C++, Java, Python, C, SQL, Assembly</p>
+            <p><strong>Engine & Frameworks:</strong> Unity, Spring Boot</p>
+            <p><strong>Databases:</strong> PostgreSQL, MySQL</p>
+            <p><strong>Tools:</strong> Git, Trello</p>
+        </div>
+    </div>
+</body>
+</html>
