@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Birol | Software & Game Developer</title>
+    <title>Birol Yeşiloğlu | Software Engineer, Games</title>
+    <meta name="description" content="Software engineer focused on games. Built and shipped Link It, a mobile puzzle game in Unity and C#, as a solo developer.">
     <style>
         :root {
             --bg-color: #0f172a;
@@ -11,6 +12,11 @@
             --text-muted: #94a3b8;
             --accent: #38bdf8;
             --card-bg: #1e293b;
+            --tag-bg: #0c4a6e;
+            --tag-text: #bae6fd;
+        }
+        * {
+            box-sizing: border-box;
         }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -23,7 +29,7 @@
         .container {
             max-width: 900px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 40px 16px;
         }
         header {
             text-align: center;
@@ -38,18 +44,32 @@
             color: var(--accent);
             font-size: 1.2rem;
             font-weight: 400;
-            margin-top: 5px;
+            margin: 5px 0;
+        }
+        .location {
+            color: var(--text-muted);
+            margin: 0 0 12px;
+        }
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px 20px;
         }
         .links a {
             color: var(--text-muted);
             text-decoration: none;
-            margin: 0 10px;
             border-bottom: 1px solid transparent;
             transition: all 0.3s;
         }
         .links a:hover {
             color: var(--accent);
             border-bottom: 1px solid var(--accent);
+        }
+        .summary {
+            color: var(--text-muted);
+            max-width: 680px;
+            margin: 24px auto 0;
         }
         .section-title {
             font-size: 1.5rem;
@@ -58,40 +78,52 @@
             margin-top: 40px;
             margin-bottom: 20px;
         }
-        .project-card, .exp-card {
+        .card {
             background-color: var(--card-bg);
             padding: 20px;
             border-radius: 8px;
             margin-bottom: 20px;
         }
-        .project-card h3, .exp-card h3 {
+        .card h3 {
             margin-top: 0;
+            margin-bottom: 4px;
             color: var(--accent);
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
+            gap: 4px 16px;
         }
-        .project-card span.date {
+        .date, .subtitle {
             color: var(--text-muted);
             font-size: 0.9rem;
+            font-weight: 400;
+        }
+        .subtitle {
+            margin: 0 0 8px;
+            font-style: italic;
+        }
+        .card p {
+            margin-top: 0;
         }
         .tags {
             margin-top: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
         }
         .tag {
-            background-color: #0c4a6e;
-            color: #bae6fd;
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
             padding: 4px 10px;
             border-radius: 4px;
             font-size: 0.8rem;
-            margin-right: 5px;
-            display: inline-block;
         }
         a.btn {
             display: inline-block;
             margin-top: 15px;
             padding: 8px 16px;
             background-color: var(--accent);
-            color: #0f172a;
+            color: var(--bg-color);
             text-decoration: none;
             border-radius: 4px;
             font-weight: bold;
@@ -101,10 +133,41 @@
         }
         ul {
             padding-left: 20px;
+            margin-bottom: 0;
             color: var(--text-muted);
         }
         li {
             margin-bottom: 8px;
+        }
+        li strong, .skills strong {
+            color: var(--text-main);
+            font-weight: 600;
+        }
+        code {
+            font-family: Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+            color: var(--tag-text);
+        }
+        .skills {
+            color: var(--text-muted);
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            gap: 8px 16px;
+        }
+        .skills p {
+            margin: 0;
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+            .skills {
+                grid-template-columns: 1fr;
+                gap: 2px;
+            }
+            .skills strong {
+                margin-top: 8px;
+            }
         }
     </style>
 </head>
@@ -112,53 +175,65 @@
     <div class="container">
         <header>
             <h1>Birol Yeşiloğlu</h1>
-            <h2>Game Developer | Founder @ BEEM STUDIOS</h2>
+            <h2>Software Engineer · Games · Unity / C#</h2>
+            <p class="location">Antalya, Türkiye · Open to relocation to Istanbul</p>
             <div class="links">
                 <a href="mailto:birolyesiloglu2002@hotmail.com">Email</a>
-                <a href="https://www.linkedin.com/in/birol-yeşiloğlu" target="_blank">LinkedIn</a>
-                <a href="https://github.com/BirolYesiloglu" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/birol-ye%C5%9Filo%C4%9Flu" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://github.com/BirolYesiloglu" target="_blank" rel="noopener">GitHub</a>
+                <!-- Put your CV next to this file as cv.pdf -->
+                <a href="cv.pdf" target="_blank" rel="noopener">CV (PDF)</a>
             </div>
+            <p class="summary">Computer Engineering graduate who shipped a mobile puzzle game as a solo developer, focused on clean, testable object-oriented architecture and algorithmic problem solving. Also experienced with Java/Spring Boot backends.</p>
         </header>
 
         <div class="section-title">Featured Project</div>
-        <div class="project-card">
+        <div class="card">
             <h3><span>Link It (Mobile Puzzle Game)</span> <span class="date">2026</span></h3>
-            <p>Designed and engineered a 2D grid-based mobile puzzle game, architecting the complete software system from scratch as a solo developer under BEEM STUDIOS.</p>
+            <p class="subtitle">Solo developer · Unity, C# · Live on Google Play, iOS release in progress</p>
             <ul>
-                <li>Implemented core gameplay mechanics strictly adhering to <strong>Clean Architecture</strong>, <strong>Object Pooling</strong>, and <strong>Event-Driven Design</strong>.</li>
-                <li>Developed a custom <strong>topological validation algorithm</strong> to dynamically verify the mathematical solvability of complex grid layouts.</li>
-                <li>Built an automated level generation tool utilizing optimized data structures, ensuring error-free level states.</li>
+                <li>Designed a <strong>polymorphic rule engine</strong> (<code>IPointRule</code>, one class per mechanic) so new mechanics such as ice, portals and water/fire are added without touching core logic; guarded the refactor with regression snapshots across all levels.</li>
+                <li>Wrote a <strong>level solver</strong> using exact-cover backtracking (most-constrained-cell heuristic, node/time limits) that verifies solvability, computes 3-star thresholds and powers in-game hints.</li>
+                <li>Built an <strong>editor tool</strong> that bulk-generates only valid levels, replacing manual level design.</li>
+                <li>Wrote <strong>35+ unit tests</strong> (NUnit, Unity Test Framework) covering path rules, the shape library and localization.</li>
+                <li>Built meta systems: lives, daily rewards, daily challenges, boosters and currency.</li>
+                <li>Built a generic object pool and applied UI rendering optimizations for low-end Android devices; separated game logic from presentation with an event-driven design.</li>
             </ul>
             <div class="tags">
                 <span class="tag">Unity</span>
                 <span class="tag">C#</span>
+                <span class="tag">OOP</span>
                 <span class="tag">Algorithms</span>
+                <span class="tag">Unit Testing</span>
                 <span class="tag">Mobile</span>
             </div>
-            <a href="https://play.google.com/store/apps/details?id=com.beem_studios.link_it" target="_blank" class="btn">View on Google Play</a>
+            <a href="https://play.google.com/store/apps/details?id=com.beem_studios.link_it" target="_blank" rel="noopener" class="btn">View on Google Play</a>
         </div>
 
         <div class="section-title">Experience</div>
-        <div class="exp-card">
-            <h3><span>Founder & Game Developer | BEEM STUDIOS</span> <span class="date">Apr 2026 – Present</span></h3>
+        <div class="card">
+            <h3><span>Software Engineer (Independent)</span> <span class="date">Apr 2026 – Present</span></h3>
+            <p class="subtitle">Beem Studios · Antalya</p>
             <ul>
-                <li>Managing the complete product lifecycle of a mobile title from conceptualization to global commercial release.</li>
-                <li>Established memory management protocols and optimized UI rendering to maintain a stable 60 FPS across a diverse range of Android devices.</li>
-                <li>Orchestrated the end-to-end deployment pipeline via Google Play Console, including IAP SDK integrations, release track management, and localization.</li>
+                <li>Built and shipped Link It end to end as a solo developer: design, gameplay and tooling code, testing and store release.</li>
+                <!-- Before publishing: confirm ads, Firebase Analytics and in-app updates are active in the live build; remove any that are not. -->
+                <li>Owned the full release: Google Play Console release tracks, rewarded and interstitial ads (AdMob) behind an <code>IAdService</code> interface, Firebase Analytics event tracking, in-app update prompts and localization into 7 languages.</li>
             </ul>
         </div>
-        <div class="exp-card">
-            <h3><span>Game Developer Intern | Skyloft Studios</span> <span class="date">Summer 2024</span></h3>
+        <div class="card">
+            <h3><span>Game Developer Intern</span> <span class="date">Jul 2024 – Aug 2024</span></h3>
+            <p class="subtitle">Skyloft Studios · İzmir</p>
             <ul>
-                <li>Developed core gameplay mechanics for a casual shooter mobile game prototype using Unity and C#.</li>
-                <li>Gained experience in collaborative game development and version control (Git).</li>
+                <li>Developed gameplay, player mechanics and enemy behavior for a five-level first-person shooter prototype in a two-person team (Unity, C#).</li>
+                <li>Implemented UI and game logic from design specs; debugged and tested to deliver a stable build (Git).</li>
             </ul>
         </div>
 
         <div class="section-title">Other Projects</div>
-        <div class="project-card">
-            <h3><span>TradePath (Backend Developer)</span> <span class="date">2025</span></h3>
-            <p>Mobile stock market prediction application. Responsible for backend and database development using <strong>Java Spring Boot</strong> and <strong>PostgreSQL</strong>. Integrated external financial APIs for real-time data.</p>
+        <div class="card">
+            <h3><span>TradePath (Graduation Project)</span> <span class="date">2025</span></h3>
+            <p class="subtitle">Yaşar University · two-person team · backend developer</p>
+            <p>Mobile stock prediction app. Built the backend: REST API in <strong>Java Spring Boot</strong>, <strong>PostgreSQL</strong> database and integration of external financial data APIs.</p>
             <div class="tags">
                 <span class="tag">Java</span>
                 <span class="tag">Spring Boot</span>
@@ -168,12 +243,26 @@
         </div>
 
         <div class="section-title">Technical Skills</div>
-        <div class="project-card" style="color: var(--text-muted);">
-            <p><strong>Languages:</strong> C#, C++, Java, Python, C, SQL, Assembly</p>
-            <p><strong>Game Engine:</strong> Unity</p>
-            <p><strong>Framework:</strong> Spring Boot</p>
-            <p><strong>Databases:</strong> PostgreSQL, MySQL</p>
-            <p><strong>Tools:</strong> Git, Trello</p>
+        <div class="card skills">
+            <strong>Languages</strong><p>C#, Java, SQL, C</p>
+            <strong>Engineering</strong><p>OOP, SOLID, design patterns (Strategy, Observer, Object Pool), unit testing (NUnit), algorithms &amp; data structures</p>
+            <strong>Game Dev</strong><p>Unity, mobile (Android, iOS), event-driven architecture, editor tooling</p>
+            <strong>Backend</strong><p>Spring Boot, REST APIs, PostgreSQL, MySQL</p>
+            <strong>Tools</strong><p>Git, Google Play Console, Trello</p>
+            <strong>Spoken</strong><p>Turkish (native), English (B2)</p>
+        </div>
+
+        <div class="section-title">Education &amp; Leadership</div>
+        <div class="card">
+            <h3><span>B.Sc. in Computer Engineering</span> <span class="date">2020 – 2025</span></h3>
+            <p class="subtitle">Yaşar University · İzmir · GPA 3.18/4.00 · 100% English-medium</p>
+        </div>
+        <div class="card">
+            <h3><span>Co-Founder &amp; President</span> <span class="date">2023 – 2025</span></h3>
+            <p class="subtitle">Game Development and Animation Student Club, Yaşar University</p>
+            <ul>
+                <li>Founded and led the club; coordinated members' game development projects.</li>
+            </ul>
         </div>
     </div>
 </body>
